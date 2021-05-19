@@ -1,14 +1,10 @@
 function generate() {
     var phonenumber = document.getElementById("data").value;
     var message = document.getElementById("data2").value
-    userAction(phonenumber,message)
-
+    var WAlink = "wa.me/2"+phonenumber+"?text="+message
+    
+    link = "https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl="+WAlink;
+    open(link);
+    
 }
 
-const userAction = async (phonenumber,message) => {
-    const xhr = new XMLHttpRequest();
-    const url = 'https://chart.googleapis.com/chart?';
-    xhr.open('GET', url);
-    xhr.send(phonenumber);
-    xhr.send(message)
-  }
