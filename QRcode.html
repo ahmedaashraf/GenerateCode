@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" 
               content="width=device-width, initial-scale=1.0" />
-        <title>Generate</title>
+        <title>Document</title>
         <script src="script.js">
             
         </script>
@@ -16,8 +16,10 @@
         <button><a href="https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=data">Generate</a></button> -->
 
         <form id="form" onsubmit="return false;">
-            <label for="text">Data:</label>
-            <input type="text" id="data" />
+            <label for="phonenumber">Phone Number:</label>
+            <input type="phonenumber" id="data" />
+	    <label for="message">Message:</label>
+	    <input type="message" id="data2"/>
             <input type="submit" onclick="generate();" />
         </form>
    
