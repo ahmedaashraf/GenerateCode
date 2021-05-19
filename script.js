@@ -6,20 +6,9 @@ function generate() {
 }
 
 const userAction = async (phonenumber,message) => {
-    const response = await fetch('https://chart.googleapis.com/chart?', {
-      method: 'POST',
-      body: {
-          "cht":"qr",
-          "chs":"200x200",
-          "chl": "wa.me/2"+phonenumber+"?text"+message
-      }, 
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': 'https://ahmedaashraf.github.io/GenerateCode/QRcode.html',
-        'Access-Control-Allow-Credentials':'true'
-      }
-    });
-   
-    const myJson = await response.json(); //extract JSON from the http response
-    console.log(myJson)
+    const xhr = new XMLHttpRequest();
+    const url = 'https://chart.googleapis.com/chart?';
+    xhr.open('GET', url);
+    xhr.send(phonenumber);
+    xhr.send(message)
   }
