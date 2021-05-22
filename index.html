@@ -28,7 +28,7 @@
 
                     <div class="Generate1-form">
                         <h3 class="form-title">QR Code Data</h3>
-                        <form class="register-form" method="POST" enctype="multipart/form-data" id="form" onsubmit="generate();">
+                        <form class="register-form" method="POST" enctype="multipart/form-data" id="form" onsubmit="generate(event);">
                             <div class="form-group">
                                 <label for="phonenumber"></label>
                                 <input type="text" name="phonenumber" id="phonenumber" placeholder="Phone Number" required/>
@@ -41,7 +41,7 @@
                                 <label for="message"></label>
                                 <textarea type="text" name="message" id="message" placeholder="Message" ></textarea>
                             </div>
-                            <input type="submit" />
+                            <input id="submisson" type="submit" />
                         </form>
                         
                     </div>
@@ -55,5 +55,6 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <script src="script.js"></script>
+
 
 </body></html>
