@@ -28,7 +28,6 @@ async function generate(e) {
 	    response => response.blob()// if the response is a JSON object
 	  ).then(
 	    blob => {
-			move()
   			const objectURL = URL.createObjectURL(blob);
  			a.href = objectURL;
         	a.download = 'DownloadedQRCODE';
