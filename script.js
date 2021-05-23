@@ -28,8 +28,9 @@ async function generate(e) {
 	    response => response.blob()// if the response is a JSON object
 	  ).then(
 	    blob => {
-  		const objectURL = URL.createObjectURL(blob);
- 		a.href = objectURL;
+			move()
+  			const objectURL = URL.createObjectURL(blob);
+ 			a.href = objectURL;
         	a.download = 'DownloadedQRCODE';
         	a.click();
         	window.URL.revokeObjectURL(objectURL);
@@ -42,3 +43,17 @@ async function generate(e) {
 };
 
 
+function move() {
+	var elem = document.getElementById("myBar");   
+	var width = 20;
+	var id = setInterval(frame, 10);
+	function frame() {
+	  if (width >= 100) {
+		clearInterval(id);
+	  } else {
+		width++; 
+		elem.style.width = width + '%'; 
+		elem.innerHTML = width * 1  + '%';
+	  }
+	}
+  }
